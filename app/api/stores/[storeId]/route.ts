@@ -22,7 +22,7 @@ export async function PATCH (
             return new NextResponse("Name is required", {status: 400});
         }
 
-        if(!params){
+        if(!params.storeId){
             return new NextResponse("Store ID is require", {status: 400});
         }
 
@@ -57,7 +57,7 @@ export async function DELETE (
             return new NextResponse("Unauthenticated", {status: 401});
         }
 
-        if(!params){
+        if(!params.storeId){
             return new NextResponse("Store ID is require", {status: 400});
         }
 
